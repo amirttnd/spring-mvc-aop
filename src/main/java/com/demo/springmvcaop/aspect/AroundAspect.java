@@ -12,7 +12,10 @@ public class AroundAspect {
     public Object syaHey(ProceedingJoinPoint proceedingJoinPoint) {
         Object value = null;
         try {
+            System.out.println("Before calling actual method");
             value = proceedingJoinPoint.proceed();
+            System.out.println("After calling actual method");
+
         } catch (Throwable e) {
             e.printStackTrace();
         }
